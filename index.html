@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EXAM BOOTSTRAP VERSION</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="bg-black d-flex justify-content-center flex-column  ">
+            <div class=" row navbar align-items-start flex-nowrap">
+                <div id="blackbar" class=" d-none d-flex flex-column justify-content-between  blknav-w bg-black vh-100">
+                    <div class="listedanchors px-1 pt-3">
+                        <ul class="list-unstyled text-white p-4">
+                            <li class="pb-4 nav-search"><a href="#"></a>Search</li>
+                            <li class="pb-4 nav-cat"><a href="#"></a>Categories</li>
+                            <li class="pb-4 nav-area "><a href="#"></a>Area</li>
+                            <li class="pb-4 nav-ingrediants"><a href="#"></a>Ingrediants</li>
+                            <li class="pb-4 nav-contact"><a href="#"></a>Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class=" blacknav-bot">
+                        <div class="text-white  ps-4  ">
+                            <i class="pe-2 fa-brands fa-facebook"></i>
+                            <i class="pe-2 fa-brands fa-twitter"></i>
+                            <i class=" fa-solid fa-globe"></i>
+                        </div>
+                        <p class="text-white ps-4">Copyright Ac2019 All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-between text-center whitenav whitenav-w bg-white vh-100">
+                    <div class="logoimg pt-5">
+                        <img class="w-100" src="img/logo.png" alt="thelogo">
+                    </div>
+                    <div class="middlineicons">
+                        <i id="closex" class="d-none  fa-2x fa-solid fa-x"></i>
+                        <i id="bars" class="  fa-2x fa-solid fa-bars"></i>
+                    </div>
+                    <div class="bottomsmallicons pb-3 d-flex flex-column ">
+                        <i class="mb-2 fa-solid fa-globe"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+
+                </div>
+            </div>
+            <!-- HOME & SEARCH  SECTION -->
+            <div id="homeandsearchcontentarea" class=" container  homecontentarea mb-5 mt-5 ">
+                <div class="d-none searchbars row mb-5 vh-100 ">
+                    <div class="col-md-6 p-2">
+                        <input class="bg-transparent text-white form-control" type="text" placeholder="Search By Name"
+                            aria-label="default input example">
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <input class="bg-transparent text-white form-control" type="text"
+                            placeholder="Search By First Letter" aria-label="default input example">
+                    </div>
+                </div>
+                <div id="foodDemo" class="row  flex-column flex-md-row gap-3">
+                    <div class="homepagemeals imgcontent rounded ">
+                        <img class=" w-100" src="img/58oia61564916529.jpg" alt="dish-img">
+                        <div class="d-flex align-items-center  overlaycontent">
+                            <p class="">Cobra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CONTACT US -->
+            <div class="d-none contactus d-flex flex-row flex-wrap align-content-center container vh-100">
+                <div class="searchbars my-auto mx-auto  row mb-5 d-md-flex">
+                    <div class="col-md-6 p-2 ">
+                        <input id="valName" value="" oninput="validateName()"  class=" form-control" type="text" placeholder="Name" aria-label="default input example">
+                        <div id="valNameError" class="d-none  mt-2 text-center alert alert-danger" role="alert">
+                            Special Characters And Numbers Not Allowed
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <input id="valMail" value="" oninput="validateMail()" class=" form-control" type="email" placeholder="Email"
+                            aria-label="default input example">
+                        <div id="valMailError" class=" d-none mt-2 text-center alert alert-danger" role="alert">
+                            Email Not Valid Example : example@yyy.zz
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <input id="valPhone" value="" oninput="validatePhone()" class=" form-control" type="text" placeholder="Phone"
+                            aria-label="default input example">
+                        <div id="valPhoneError" class="d-none mt-2 text-center alert alert-danger" role="alert">
+                            Enter Valid Phone Number
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <input id="valAge" value="" oninput="validateAge()" class=" form-control" type="number" placeholder="Age" aria-label="default input example">
+                        <div id ="valAgeError" class="d-none mt-2 text-center alert alert-danger" role="alert">
+                            Enter Valid Age
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <input id="valPass" value="" oninput="validatePass()" class=" form-control" type="password" placeholder="Password"
+                            aria-label="default input example">
+                        <div id="valPassError" class="d-none mt-2 text-center alert alert-danger" role="alert">
+                            Enter Valid Password * Minimum eight characcters,at least one letter and one number:*
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <input id="valRepass" value="" oninput="validateRepass()" class=" form-control" type="password" placeholder="Repassword"
+                            aria-label="default input example">
+                        <div id="valRepassError" class="d-none mt-2 text-center alert alert-danger" role="alert">
+                            Enter Valid Repassowrd
+                        </div>
+                    </div>
+                    <button id="redbtn" type="button" class="mx-auto mt-2 subbtn btn btn-outline-danger disabled">Danger</button>
+                </div>
+
+            </div>
+            <!-- INGREDIANTS -->
+            <div class="d-none ingrediants w-100 ">
+                <div class="container">
+                    <div id="ingDemo" class="row">
+                        <div class=" cardblock col-md-3 mt-5 text-white text-center">
+                            <i class="fa-4x fa-solid fa-drumstick-bite"></i>
+                            <h1 class="mealtitle">Chicken</h1>
+                            <p class="mealpara">The chicken is a type of domesticated fowl, a subspecies of the red
+                                junglefowl (Gallus gallus). It is one of</p>
+                        </div>
+                        <div class="col-md-3 mt-5 text-white text-center">
+                            <i class="fa-4x fa-solid fa-drumstick-bite"></i>
+                            <h1 class="mealtitle">Chicken</h1>
+                            <p class="mealpara">The chicken is a type of domesticated fowl, a subspecies of the red
+                                junglefowl (Gallus gallus). It is one of</p>
+                        </div>
+                        <div class="col-md-3 mt-5 text-white text-center">
+                            <i class="fa-4x fa-solid fa-drumstick-bite"></i>
+                            <h1 class="mealtitle">Chicken</h1>
+                            <p class="mealpara">The chicken is a type of domesticated fowl, a subspecies of the red
+                                junglefowl (Gallus gallus). It is one of</p>
+                        </div>
+                        <div class="col-md-3 mt-5 text-white text-center">
+                            <i class="fa-4x fa-solid fa-drumstick-bite"></i>
+                            <h1 class="mealtitle">Chicken</h1>
+                            <p class="mealpara">The chicken is a type of domesticated fowl, a subspecies of the red
+                                junglefowl (Gallus gallus). It is one of</p>
+                        </div>
+                        <div class="col-md-3 mt-5 text-white text-center">
+                            <i class="fa-4x fa-solid fa-drumstick-bite"></i>
+                            <h1 class="mealtitle">Chicken</h1>
+                            <p class="mealpara">The chicken is a type of domesticated fowl, a subspecies of the red
+                                junglefowl (Gallus gallus). It is one of</p>
+                        </div>
+                        <div class="col-md-3 mt-5 text-white text-center">
+                            <i class="fa-4x fa-solid fa-drumstick-bite"></i>
+                            <h1 class="mealtitle">Chicken</h1>
+                            <p class="mealpara">The chicken is a type of domesticated fowl, a subspecies of the red
+                                junglefowl (Gallus gallus). It is one of</p>
+                        </div>
+                        <div class="col-md-3 mt-5 text-white text-center">
+                            <i class="fa-4x fa-solid fa-drumstick-bite"></i>
+                            <h1 class="mealtitle">Chicken</h1>
+                            <p class="mealpara">The chicken is a type of domesticated fowl, a subspecies of the red
+                                junglefowl (Gallus gallus). It is one of</p>
+                        </div>
+                        <div class="col-md-3 mt-5 text-white text-center">
+                            <i class="fa-4x fa-solid fa-drumstick-bite"></i>
+                            <h1 class="mealtitle">Chicken</h1>
+                            <p class="mealpara">The chicken is a type of domesticated fowl, a subspecies of the red
+                                junglefowl (Gallus gallus). It is one of</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CATEGORIES SECTION  -->
+            <div class=" d-none categories">
+                <div class="container  mb-5 mt-5 ">
+                    <div id="catDemo" class="row   flex-column flex-md-row gap-3">
+                        <div class="cardblock imgcategorycontent rounded ">
+                            <img class=" w-100" src="img/categories/beef.png" alt="dish-img">
+                            <div class="text-center  justify-content-center overlaycontent">
+                                <p class="cattitle">Beef</p>
+                                <p class="catpara h6 p-2">
+                                    beef is the cuilnary name for maet from cattle, particularly skeletal muscle.
+                                    Humans have been eating beef since prehistoric times.[1]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SUB CATEGORIES  -->
+            <div class=" d-none subcategoires container">
+                <div id="subCatDemo" class="row  flex-column flex-md-row gap-3">
+                    <div class="subcategorymeals imgcontent rounded ">
+                        <img class=" w-100" src="img/58oia61564916529.jpg" alt="dish-img">
+                        <div class="d-flex align-items-center  overlaycontent">
+                            <p class="">Cobra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- AREA SECTION -->
+            <div class="d-none area ">
+                <div class="container">
+                    <div id="areaDemo" class="row ">
+                        <div class="cardblock col-md-3 mt-3 d-flex flex-column align-items-center text-white">
+                            <i class=" fa-4x fa-solid fa-house"></i>
+                            <h3>American</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- INSTUCTIONS PAGE -->
+            <div id='instructionpage' class="d-none instruction">
+                <div class="container">
+                    <div id="instDemo" class="row   mt-5">
+                        <div class="col-md-4">
+                            <div class="selectedmealimg">
+                                <img class="rounded w-100" src="img/Instrucitons/vdwloy1713225718.jpg" alt="burger_img">
+                            </div>
+                            <h1 class="text-white selectedmealtitle">15-minute chicken & halloumi burgers</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="text-white">Instructions</h2>
+                            <p class="text-white">STEP 1 Put the chicken breasts between two pieces of baking parchment
+                                and use a rolling
+                                pin to gently bash them until they are approximately 1cm thick. Cut each chicken breast
+                                into two even pieces. STEP 2 If you're using a frying pan, heat two frying pans over
+                                medium-high heat, with one of them containing oil. Fry the chicken in the oiled pan for
+                                3-4 mins on each side until they are cooked through. Season the chicken, reduce the
+                                heat, drizzle in the chilli sauce and half of the lemon juice, and cook for an
+                                additional 1-2 mins until the sauce is reduced. Remove the chicken from the heat. STEP 3
+                                If you're using an air-fryer, preheat it to 180C for 4 mins. Add the chicken to the
+                                air-fryer and cook for 12 mins. Drizzle over the chilli sauce and half the lemon juice
+                                and cook for an additional 1-2 mins until the chicken is cooked through and the sauce is
+                                reduced. Remove the chicken and keep it warm. STEP 4 While the chicken is cooking, toast
+                                the buns in the dry frying pan for 30 seconds. Transfer them to a plate. If you're using
+                                an air fryer, put the buns in the air fryer for 1-2 mins until they are warm. Increase
+                                the air fryer temperature to 200C. Add the halloumi to the air fryer basket and cook for
+                                10 mins, turning halfway through, until it's golden. Toss the cabbage with the mayo and
+                                the remaining lemon juice. STEP 5 Spoon the hummus (or dip of your choice) into the
+                                toasted buns, then top with the rocket, chilli chicken, halloumi, and peppers. Drizzle
+                                with a little more chilli sauce, spoon over the cabbage, season with black pepper, and
+                                top with the bun lids. Serve with any extra cabbage on the side or a green salad.
+                            </p>
+                            <ul class="list-unstyled text-white">
+                                <li>
+                                    <h2>Area : American</h2>
+                                </li>
+                                <li>
+                                    <h2>Category : Chicken</h2>
+                                </li>
+                                <li>
+                                    <h2>Recipes : </h2>
+                                </li>
+                                <div class="recipes">
+                                    <span class="badge mt-3 mx-2 text-bg-info">2 Chicken Breasts</span>
+                                    <span class="badge mt-3 mx-2 text-bg-info">2 Chicken Breasts</span>
+                                    <span class="badge mt-3 mx-2 text-bg-info">2 Chicken Breasts</span>
+                                    <span class="badge mt-3 mx-2 text-bg-info">2 Chicken Breasts</span>
+                                    <span class="badge mt-3 mx-2 text-bg-info">2 Chicken Breasts</span>
+                                    <span class="badge mt-3 mx-2 text-bg-info">2 Chicken Breasts</span>
+                                    <span class="badge mt-3 mx-2 text-bg-info">2 Chicken Breasts</span>
+                                </div>
+                                <li class="mt-4">
+                                    <h2>Tags :</h2>
+                                    <div>
+                                        <span class="badge mt-3 mx-2 text-bg-danger">soup</span>
+                                    </div>
+                                </li>
+                                <div class="buttons">
+                                    <a class="mt-3 me-1 btn btn-success" href="https://www.google.com"
+                                        role="button">Source</a>
+                                    <a class="mt-3 btn btn-danger" href="#" role="button">Youtube</a>
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LOADING -->
+            <div class="d-none loadingbg mx-auto vh-100 w-100">
+                <div class="text-white   lds-default">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+    </section>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/javacode.js"></script>
+</body>
+
+</html>
